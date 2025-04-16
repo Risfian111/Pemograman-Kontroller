@@ -125,6 +125,64 @@ float MPX5700AP_ADCToPressure(uint32_t adcValue);
 
 ```
 
+## katup Pemanas 
+
+Proggram Library Katup pemanas
+
+```bash
+#ifndef VALVE_H
+#define VALVE_H
+
+#include "stm32f4xx_hal.h" // Pastikan untuk menyertakan HAL jika diperlukan
+
+// Definisi pin untuk katup pemanas
+#define VALVE_PIN GPIO_PIN_1 // Ganti dengan pin yang sesuai
+#define VALVE_PORT GPIOB     // Ganti dengan port yang sesuai
+
+// Fungsi untuk menginisialisasi katup pemanas
+void Valve_Init(void);
+
+// Fungsi untuk membuka katup pemanas
+void Valve_Open(void);
+
+// Fungsi untuk menutup katup pemanas
+void Valve_Close(void);
+
+// Fungsi untuk memeriksa status katup pemanas
+uint8_t Valve_GetStatus(void);
+
+#endif // VALVE_H
+```
+
+## Pump
+
+Proggram Library Pump
+
+```bash
+#ifndef PUMP_H
+#define PUMP_H
+
+#include "stm32f4xx_hal.h" // Pastikan untuk menyertakan HAL jika diperlukan
+
+// Definisi pin untuk pompa
+#define PUMP_PIN GPIO_PIN_0 // Ganti dengan pin yang sesuai
+#define PUMP_PORT GPIOA     // Ganti dengan port yang sesuai
+
+// Fungsi untuk menginisialisasi pompa
+void Pump_Init(void);
+
+// Fungsi untuk menghidupkan pompa
+void Pump_On(void);
+
+// Fungsi untuk mematikan pompa
+void Pump_Off(void);
+
+// Fungsi untuk memeriksa status pompa
+uint8_t Pump_GetStatus(void);
+
+#endif // PUMP_H
+```
+
 ## Main Proggram
 
 Main Proggram
