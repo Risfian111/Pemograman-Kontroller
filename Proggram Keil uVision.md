@@ -100,6 +100,7 @@ extern volatile uint32_t pulseCount;
 
 #endif // YF_S201_H
 
+```
 
 ## Sensor MPX
 
